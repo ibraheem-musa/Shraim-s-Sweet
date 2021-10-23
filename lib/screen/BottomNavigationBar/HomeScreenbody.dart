@@ -58,7 +58,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
             image: 'lib/assets/HomescreenIcon/Special today-01.jpg',
             text: AppLocalizations.of(context).translate('HappyCustomers'),
           ),
-
+ 
           HappyCustomers(),
         ],
       ),

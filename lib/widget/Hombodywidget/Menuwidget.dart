@@ -9,6 +9,7 @@ class MenuWidget extends StatefulWidget {
 }
 
 class _MenuWidgetState extends State<MenuWidget> {
+  
   @override
   Widget build(BuildContext context) {
     return   SingleChildScrollView(
@@ -17,13 +18,8 @@ class _MenuWidgetState extends State<MenuWidget> {
               child: Row(
                         children: <Widget>[
                          
-                          // CardFormenu(image: 'lib/assets/HomescreenIcon/icon-01.jpg',text: 'Specialty',),
-                          // CardFormenu(image: 'lib/assets/HomescreenIcon/icon-02.jpg',text: 'Desserts',),
-                          // CardFormenu(image: 'lib/assets/HomescreenIcon/icon-03.jpg',text: 'Drinks',),
-                          // CardFormenu(image: 'lib/assets/HomescreenIcon/icon-05.jpg',text: 'Snacks',),
-                          // CardFormenu(image: 'lib/assets/HomescreenIcon/icon-04.jpg',text: 'family',),
-                              
-                             CardFormenu(image: 'lib/assets/HomescreenIcon/speciality_icon.png',text: 'Specialty',),
+                         
+                              CardFormenu(image: 'lib/assets/HomescreenIcon/speciality_icon.png',text: 'Specialty',),
                           CardFormenu(image: 'lib/assets/HomescreenIcon/desert_icon.png',text: 'Desserts',),
                           CardFormenu(image: 'lib/assets/HomescreenIcon/drink_icon.png',text: 'Drinks',),
                           CardFormenu(image: 'lib/assets/HomescreenIcon/snacks_icon.png',text: 'Snacks',),

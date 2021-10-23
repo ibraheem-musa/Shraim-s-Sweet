@@ -13,11 +13,11 @@ class TextForTitle extends StatelessWidget {
                           Row(
                             children: [
                              Image.asset(image,height: 30,width:30,),
-                              Text('     '+text),
+                              Text('     '+text,style: TextStyle(color: Color(0xffbf942e),),),
 
                             ],
                           ),
-                           Divider(height: 0,color: Colors.black,thickness: 1,indent: 5,endIndent: 25,),
+                           Divider(height: 0,color: Color(0xffbf942e),thickness: 1,indent: 5,endIndent: 25,),
                         ],
                       )
                     );

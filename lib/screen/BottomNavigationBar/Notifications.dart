@@ -37,11 +37,11 @@ class _NotifficationScreenState extends State<NotifficationScreen> {
               
                                     
                       Row(
+                        mainAxisAlignment : MainAxisAlignment.end ,
                         children: [
                           
-                          Align(
-                            alignment: Alignment.bottomRight,
-                            child: TextButton(onPressed: (){}, child:Row(
+                         
+                            TextButton(onPressed: (){}, child:Row(
                               children: [
                                 Text('see more',style: TextStyle(color: Color(0xffBF942E)),),
                                 Icon(Icons.arrow_forward_ios, size: 20,color:Color(0xffBF942E) ,),
@@ -49,7 +49,7 @@ class _NotifficationScreenState extends State<NotifficationScreen> {
                              )
                                           
                                         ),
-                          ),
+                         
                         ],
                       ),
 

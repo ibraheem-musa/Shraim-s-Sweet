@@ -32,7 +32,7 @@ dependencies:
   curved_navigation_bar: ^1.0.1
   splashscreen: 
   shared_preferences: ^2.0.8
-  carousel_pro: ^1.0.0
+  carousel_pro: ^1.0.0 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -71,7 +71,6 @@ flutter:
    - lib/assets/HomescreenIcon/w.jpg
    - lib/assets/HomescreenIcon/L.jpg
    - lib/assets/HomescreenIcon/D.jpg
-   - lib/assets/HomescreenIcon/orders-01.jpg
    - lang/en.json
    - lang/fr.json
 
