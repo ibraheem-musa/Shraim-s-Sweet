@@ -1,5 +1,6 @@
 import 'package:first_app_for_test/screen/DrawerScreen/ContactUs.dart';
 import 'package:first_app_for_test/screen/DrawerScreen/Galary.dart';
+import 'package:first_app_for_test/screen/DrawerScreen/PrivacyandPolicy.dart';
 import 'package:first_app_for_test/screen/LoginScreen.dart';
 import 'package:first_app_for_test/widget/Splash_Screen.dart';
 import 'package:first_app_for_test/provider/drawerprovider.dart';
@@ -77,7 +78,7 @@ class MyAppState extends State<MyApp> {
         locale: _locale,
 
       home:
-       ContactUs(),
+       Splash(),
       
       
       ));

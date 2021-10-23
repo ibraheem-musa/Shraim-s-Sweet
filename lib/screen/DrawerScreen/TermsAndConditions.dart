@@ -1,6 +1,6 @@
 import 'package:first_app_for_test/applocal.dart';
-import 'package:first_app_for_test/widget/Drawer_widget.dart';
-import 'package:first_app_for_test/widget/NavigationBar_widget.dart';
+import 'package:flutter/animation.dart';
+
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 class TermsAndConditions extends StatefulWidget {
@@ -11,14 +11,72 @@ class TermsAndConditions extends StatefulWidget {
 }
 
 class _TermsAndConditionsState extends State<TermsAndConditions> {
+  final controler=ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(milliseconds: 1000)).then((value) => setState(() {
+         scroldown();
+        }));
+  }
+    scroldown()
+    {
+final double end=controler.position.maxScrollExtent;
+      controler.animateTo(end, duration: Duration(seconds: 45), curve:Curves.linear);
+    }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
             title: Text(AppLocalizations.of(context).translate('TermsandCondition')),
             backgroundColor: HexColor("#bf942e")),
-        body: Container(),
+        body: Center(
+        child: Container(child: ListView(
+          controller: controler,
+          children: [
+              Wrap(children: [
+                TextForTermAndCondition(text: AppLocalizations.of(context).translate('TermAndConditionpart1',),fontsize: 22,),
+TextForTermAndCondition(text: AppLocalizations.of(context).translate('TermAndConditionpart2',),fontsize: 18,),
+TextForTermAndCondition(text: AppLocalizations.of(context).translate('TermAndConditionpart3',),fontsize: 18,),
+TextForTermAndCondition(text: AppLocalizations.of(context).translate('TermAndConditionpart4',),fontsize: 18,),
+TextForTermAndCondition(text: AppLocalizations.of(context).translate('TermAndConditionpart5',),fontsize: 18,),
+TextForTermAndCondition(text: AppLocalizations.of(context).translate('TermAndConditionpart6',),fontsize: 18,),
+TextForTermAndCondition(text: AppLocalizations.of(context).translate('TermAndConditionpart7',),fontsize: 18,),
+TextForTermAndCondition(text: AppLocalizations.of(context).translate('TermAndConditionpart8',),fontsize: 18,),
+TextForTermAndCondition(text: AppLocalizations.of(context).translate('TermAndConditionpart9',),fontsize: 18,),
+
+
+
+               ],)
+
+          ],
+        ),),
+        
+      ),
+   
        
         );
+  }
+}
+
+class TextForTermAndCondition extends StatelessWidget {
+  String text;
+  double fontsize;
+  TextForTermAndCondition({this.text,this.fontsize});
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Center(
+              child: Text(text,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: fontsize, color: Colors.black87))),
+        ),
+      ],
+    );
   }
 }

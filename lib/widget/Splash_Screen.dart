@@ -18,7 +18,7 @@ class _SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     return  SplashScreen(
       seconds: 4,
-      navigateAfterSeconds:  LoginScreen(),
+      navigateAfterSeconds:  HomeScreen(),
       title: Text("Shraim's Sweets",
       style: TextStyle(
         fontWeight: FontWeight.bold,
