@@ -76,6 +76,9 @@ flutter:
    - lib/assets/HomescreenIcon/w.jpg
    - lib/assets/HomescreenIcon/L.jpg
    - lib/assets/HomescreenIcon/D.jpg
+   - lib/assets/Subcatogry/Crepe & Roll.png
+   - lib/assets/Subcatogry/Ice Cream.png
+   - lib/assets/Subcatogry/Shraim's Milkshake.png
    - lang/en.json
    - lang/fr.json
 

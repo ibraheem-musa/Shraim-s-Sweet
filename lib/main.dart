@@ -1,7 +1,7 @@
-import 'package:first_app_for_test/screen/DrawerScreen/ContactUs.dart';
-import 'package:first_app_for_test/screen/DrawerScreen/Galary.dart';
-import 'package:first_app_for_test/screen/DrawerScreen/PrivacyandPolicy.dart';
-import 'package:first_app_for_test/screen/LoginScreen.dart';
+import 'package:first_app_for_test/provider/MenuCategoryprovider.dart';
+import 'package:first_app_for_test/provider/MenuSubCategoryprovider.dart';
+import 'package:first_app_for_test/screen/MenuCategoryScreen.dart';
+import 'package:first_app_for_test/screen/home_screen.dart';
 import 'package:first_app_for_test/widget/Splash_Screen.dart';
 import 'package:first_app_for_test/provider/drawerprovider.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +46,8 @@ class MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MultiProvider(providers: [
              ChangeNotifierProvider.value( value: DrawerProvider(),),
-
+             ChangeNotifierProvider.value( value: MenuCategoryProvider(),),
+  ChangeNotifierProvider.value( value: MenuSubCategoryProvider(),),
     ], child:
     
     MaterialApp(
@@ -62,7 +63,6 @@ class MyAppState extends State<MyApp> {
         GlobalMaterialLocalizations.delegate,
 
       ],
-  
         localeResolutionCallback: (currentLang , supportLang){
         if(currentLang != null){
           for(Locale local in supportLang){
@@ -79,8 +79,19 @@ class MyAppState extends State<MyApp> {
 
       home:
        Splash(),
-      
+      routes: {
+        
+        nameroute.nameRouote_HomeScreen :(ctx)=> HomeScreen(), 
+                nameroute.nameRouote_MenuCategoryForsupCategory :(ctx)=> MenuCategoryForsupCategory(), 
+
+
+      },
       
       ));
   }
+}
+class nameroute{
+ static const nameRouote_HomeScreen ='/HomeScreen';
+ static const nameRouote_MenuCategoryForsupCategory ='/MenuCategoryForsupCategory';
+
 }

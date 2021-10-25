@@ -1,5 +1,6 @@
-import 'package:first_app_for_test/screen/home_screen.dart';
+import 'package:first_app_for_test/main.dart';
 import 'package:flutter/material.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({key}) : super(key: key);
@@ -13,16 +14,18 @@ class _LoginScreenState extends State<LoginScreen> {
 
   String userEmail;
   String userPassowrd;
+
+bool islogen=true;
   CheckifTheTextBoxEmpty() {
     if (!loginformkey.currentState.validate()) {
       return null;
     } else {
       loginformkey.currentState.save();
       if (userEmail == "1" && userPassowrd == "1") {
-         Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => HomeScreen()),
-        );
+        
+         Navigator.pushNamed(context,nameroute.nameRouote_HomeScreen,
+         arguments: islogen
+         );
       } else {
 
       }
