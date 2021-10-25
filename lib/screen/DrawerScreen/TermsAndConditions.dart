@@ -30,9 +30,12 @@ final double end=controler.position.maxScrollExtent;
     return Scaffold(
         appBar: AppBar(
             title: Text(AppLocalizations.of(context).translate('TermsandCondition')),
+            centerTitle: true,
             backgroundColor: HexColor("#bf942e")),
         body: Center(
-        child: Container(child: ListView(
+        child: Container(
+          color:Color(0xaabf942e) ,
+          child: ListView(
           controller: controler,
           children: [
               Wrap(children: [
