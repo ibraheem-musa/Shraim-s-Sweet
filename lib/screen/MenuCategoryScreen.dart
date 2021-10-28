@@ -1,9 +1,11 @@
 import 'package:first_app_for_test/applocal.dart';
+import 'package:first_app_for_test/model/MenuProduct.dart';
 import 'package:first_app_for_test/provider/MenuCategoryprovider.dart';
 import 'package:first_app_for_test/provider/MenuSubCategoryprovider.dart';
-import 'package:flutter/material.dart';
+
 import 'package:provider/provider.dart';
 
+import 'package:flutter/material.dart';
 class MenuCategoryForsupCategory extends StatefulWidget {
   const MenuCategoryForsupCategory({key}) : super(key: key);
 
@@ -12,96 +14,51 @@ class MenuCategoryForsupCategory extends StatefulWidget {
       _MenuCategoryForsupCategoryState();
 }
 
-class _MenuCategoryForsupCategoryState
-    extends State<MenuCategoryForsupCategory> {
-  String dropdownValue;
+class _MenuCategoryForsupCategoryState extends State<MenuCategoryForsupCategory> {
+  
   @override
   Widget build(BuildContext context) {
-    MenuCategoryProvider menuCategoryProvider =
-        Provider.of<MenuCategoryProvider>(context, listen: false);
-    MenuSubCategoryProvider menuSubCategoryProvider =
-        Provider.of<MenuSubCategoryProvider>(context, listen: false);
+  var idForcat;
+     idForcat= ModalRoute.of(context).settings.arguments as int;
+
+    // MenuCategoryProvider menuCategoryProvider =
+    //     Provider.of<MenuCategoryProvider>(context, listen: false);
+
+    MenuProductProvider menuProductProvider =
+        Provider.of<MenuProductProvider>(context, listen: false);
+
+        List<MenuProduct> filtercatgory;
 
         
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Color(0xffBF942E),
-        body: Container(
-          height: MediaQuery.of(context).size.height,
-          child: Column(
-            children: [
-              Container(
-                height: MediaQuery.of(context).size.height / 4,
-                child: ListView.builder(
-                    itemCount: menuCategoryProvider.drawerscreentitle.length,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (_, index) {
-                      return cercilCard(
-                        image: menuCategoryProvider
-                            .drawerscreentitle[index].logoImage,
-                        text:
-                            menuCategoryProvider.drawerscreentitle[index].name,
-                      );
-                    }),
-              ),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: menuSubCategoryProvider.drawerscreentitle.length,
-                  itemBuilder: (_, i) {
-                  return CardForsubcatogry(
-                    image: menuSubCategoryProvider.drawerscreentitle[i].image,
-                    price: menuSubCategoryProvider.drawerscreentitle[i].price,
-                    textforname: menuSubCategoryProvider.drawerscreentitle[i].name,
+      filtercatgory = menuProductProvider.menuProduct.where((elemnt2) {
+        return elemnt2.idCategory==idForcat;
+      }).toList();
 
-                  );
-                }),
-              )
-            ],
+    return  Scaffold(
+      appBar: AppBar(title: Text('Menu'),centerTitle: true,backgroundColor:Color(0xffBF942E) ,),
+      body: Container(
+          color: Color(0xffBF942E),
+          child: Container(
+            height: MediaQuery.of(context).size.height,
+            child: Column(
+              children: [
+               
+                Expanded(
+                  child: ListView.builder(
+                    itemCount:  filtercatgory.length,
+                    itemBuilder: (_, i) {
+                    return CardForsubcatogry(
+                      image: filtercatgory[i].image,
+                      price:  filtercatgory[i].price,
+                      textforname:  filtercatgory[i].name,
+    
+                    );
+                  }),
+                )
+              ],
+            ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class cercilCard extends StatelessWidget {
-  String text;
-  String image;
-  cercilCard({this.image, this.text});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(12.0),
-      child: Container(
-        // shape: RoundedRectangleBorder(
-        //   borderRadius: BorderRadius.circular(50.0),
-        // ),
-        color: Colors.transparent,
-        child: Container(
-          height: MediaQuery.of(context).size.height / 4,
-          width: 100,
-          child: Column(
-            children: [
-              ClipRRect(
-                  borderRadius: BorderRadius.circular(50),
-                  child: Image.asset(
-                    image,
-                    fit: BoxFit.contain,
-                  )),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                AppLocalizations.of(context).translate(text),
-                style: TextStyle(
-                  fontSize: 16,
-                ),
-              )
-            ],
-          ),
-        ),
-      ),
     );
   }
 }
@@ -137,17 +94,23 @@ class CardForsubcatogry extends StatelessWidget {
                         fit: BoxFit.contain,
                       ),
                     ),
-                    Column(
-                      children: [
-                        Text(
-                          textforname,
-                          style: TextStyle(fontSize: 20),
-                        ),
-                        Text(
-                          price.toString()+' \$',
-                          style: TextStyle(fontSize: 20),
-                        )
-                      ],
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Wrap(
+                            children: [
+                              Text(
+                                textforname,
+                                style: TextStyle(fontSize: 20),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            price.toString()+' \$',
+                            style: TextStyle(fontSize: 20),
+                          )
+                        ],
+                      ),
                     ),
                   ],
                 ),

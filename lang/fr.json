@@ -1,5 +1,10 @@
 {
     "Home":"Page d'accueil",
+    "Cartwidget":"Chariot",
+    "ordernowwidget":"Commandez maintenant",
+    "notificationwidget":"notification",
+    "settingwidget":"réglage",
+
     "ContactUs":"Nous contacter",
     "PrivacyandPolicy":"Confidentialité et politique",
     "gallery":"Galerie",

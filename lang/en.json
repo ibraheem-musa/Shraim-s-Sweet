@@ -1,5 +1,10 @@
 {
     "Home":"Home screen",
+    "Cartwidget":"The Cart",
+    "ordernowwidget":"Order Now",
+    "notificationwidget":"Notification",
+    "settingwidget":"Setting",
+
     "ContactUs":"Contact Us",
     "PrivacyandPolicy":"Privacy Policy",
     "gallery":"Gallery",

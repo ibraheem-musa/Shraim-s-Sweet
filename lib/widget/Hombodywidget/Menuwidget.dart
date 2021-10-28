@@ -1,6 +1,7 @@
 import 'package:first_app_for_test/applocal.dart';
 import 'package:first_app_for_test/main.dart';
 import 'package:first_app_for_test/provider/MenuCategoryprovider.dart';
+import 'package:first_app_for_test/screen/BottomNavigationBar/OrdarScreen.dart';
 import 'package:first_app_for_test/screen/MenuCategoryScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -21,20 +22,28 @@ class _MenuWidgetState extends State<MenuWidget> {
     return Container(
       height: 190,
       child: ListView.builder(
-          itemCount: drawerProvider.drawerscreentitle.length,
+          itemCount: drawerProvider.menuCategory.length,
           scrollDirection: Axis.horizontal,
           itemBuilder: (_, i) {
             return GestureDetector(
 
                 onTap: () {
-                 Navigator.pushNamed(context,nameroute.nameRouote_MenuCategoryForsupCategory,
-         arguments: drawerProvider.drawerscreentitle[i].id
+
+                  
+        //            Navigator.push(
+        //   context,
+        //   MaterialPageRoute(builder: (context) => OrdarScreen()));
+
+                 Navigator.pushNamed(context,nameroute.nameRouote_HomeScreen,
+         arguments: 2
+         
          );
+         
                 },
 
                 child: CardFormenu(
-                  image: drawerProvider.drawerscreentitle[i].image,
-                  text: drawerProvider.drawerscreentitle[i].name,
+                  image: drawerProvider.menuCategory[i].image,
+                  text: drawerProvider.menuCategory[i].name,
                 ));
           }),
     )

@@ -32,53 +32,62 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
         children: <Widget>[
           islogin
               ? SizedBox(height: 0,)
-              : Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Color(0xffbf942e)),
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                  ),
+              : Padding(
+                padding: const EdgeInsets.fromLTRB(5, 8, 5, 2),
+                child: Container(
                   height: MediaQuery.of(context).size.height / 5,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            // Padding(
-                            //   padding: const EdgeInsets.all(12.0),
-                            //   child: Center(child: Icon(Icons.person,size: 40,)),
-                            // ),
-                            Expanded(
-                              child: Wrap(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(12.0),
-                                    child: Text(
-                                        " Log in or create account to get all User Permissions ",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          
-                                            fontSize: 20, color: Color(0xffbf942e))),
-                                  ),
-                                ],
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Color(0xffbf942e)),
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
+                    
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Center(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              // Padding(
+                              //   padding: const EdgeInsets.all(12.0),
+                              //   child: Center(child: Icon(Icons.person,size: 40,)),
+                              // ),
+                              Expanded(
+                                child: Wrap(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(12.0),
+                                      child: Text(
+                                          " Log in or create account to get all User Permissions ",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            
+                                              fontSize: 20, color: Color(0xffbf942e))),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                      OutlinedButton(
-                          style: OutlinedButton.styleFrom(),
-                          onPressed: () {
-                             Navigator.push(
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 6),
+                            child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(),
+                                onPressed: () {
+                                   Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => LoginScreen()));
-                          },
-                          child: Text("Login",
-                              style: TextStyle(color: Color(0xffbf942e))))
-                    ],
+                                },
+                                child: Text("Login",
+                                    style: TextStyle(color: Color(0xffbf942e)))),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
-                ),
+              ),
 
           //---------1 Spicial Today--------------
           TextForTitle(

@@ -9,10 +9,10 @@ class ComingSoon extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: <Widget>[
-          CardForComingSoon(image: 'lib/assets/HomescreenIcon/w.jpg',text: 'sweet',subText:'this offer just for two days' ,),
-           CardForComingSoon(image: 'lib/assets/HomescreenIcon/L.jpg',text: 'Lolipop',subText:'this offer just for two days' ,),
-            CardForComingSoon(image: 'lib/assets/HomescreenIcon/D.jpg',text: 'desserts',subText: 'this offer just for two days',),
-             CardForComingSoon(image: 'lib/assets/HomescreenIcon/w.jpg',text: 'sweet',subText:'this offer just for two days' ,),
+          CardForComingSoon(image: 'lib/assets/HomescreenIcon/w.jpg',text: 'sweet  ',subText:'this offer just for two days' ,),
+           CardForComingSoon(image: 'lib/assets/HomescreenIcon/L.jpg',text: 'Lolipop   ',subText:'this offer just for two days' ,),
+            CardForComingSoon(image: 'lib/assets/HomescreenIcon/D.jpg',text: 'desserts   ',subText: 'this offer just for two days',),
+             CardForComingSoon(image: 'lib/assets/HomescreenIcon/w.jpg',text: 'sweet  ',subText:'this offer just for two days' ,),
               
         ],
       ),
@@ -34,11 +34,14 @@ class CardForComingSoon extends StatelessWidget {
       ),
       color: Color(0xAABF942E),
       child: Container(
-        height: MediaQuery.of(context).size.height/3,
-        width: MediaQuery.of(context).size.height/2.5,
+        height: MediaQuery.of(context).size.height/2.8,
+        width: MediaQuery.of(context).size.width-50,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Container(height: MediaQuery.of(context).size.height/4,width: MediaQuery.of(context).size.height/2.5,
+            Container(
+              height: MediaQuery.of(context).size.height/4,
+              width:MediaQuery.of(context).size.width-50,
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
                   child: Image.asset(
@@ -51,22 +54,37 @@ class CardForComingSoon extends StatelessWidget {
             ),
             Padding(
               padding:  EdgeInsets.fromLTRB(8,0,8,0),
-              child: Wrap(
-                children: [
-                  Text(
-                    text,
-                    style: TextStyle(
-                      fontSize: 16,
-                    ),
-                  ),
-                 SizedBox(height: 20,),
-                  Text(
-                    subText,
-                    style: TextStyle(
-                      fontSize: 16,
-                    ),
-                  ),
-                ],
+              child: Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                   
+                        Text(
+                          
+                          text,
+                                                       textAlign: TextAlign.center,
+
+                          style: TextStyle(
+                            fontSize: 16,
+
+                          ),
+                        ),
+                      
+                    
+                        Wrap(
+                          children: [
+                            Text(
+                              subText,
+                               textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                      
+                  ],
+                ),
               ),
             ),
 

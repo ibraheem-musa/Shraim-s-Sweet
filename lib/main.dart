@@ -1,5 +1,6 @@
 import 'package:first_app_for_test/provider/MenuCategoryprovider.dart';
 import 'package:first_app_for_test/provider/MenuSubCategoryprovider.dart';
+import 'package:first_app_for_test/screen/BottomNavigationBar/OrdarScreen.dart';
 import 'package:first_app_for_test/screen/MenuCategoryScreen.dart';
 import 'package:first_app_for_test/screen/home_screen.dart';
 import 'package:first_app_for_test/widget/Splash_Screen.dart';
@@ -17,6 +18,7 @@ void main() async{
    runApp(MyApp());
 }
 class MyApp extends StatefulWidget {
+  
   
   const MyApp({  key }) : super(key: key);
  static void setLocale(BuildContext context, Locale newLocale) {
@@ -47,7 +49,7 @@ class MyAppState extends State<MyApp> {
     return MultiProvider(providers: [
              ChangeNotifierProvider.value( value: DrawerProvider(),),
              ChangeNotifierProvider.value( value: MenuCategoryProvider(),),
-  ChangeNotifierProvider.value( value: MenuSubCategoryProvider(),),
+  ChangeNotifierProvider.value( value: MenuProductProvider(),),
     ], child:
     
     MaterialApp(
@@ -82,7 +84,8 @@ class MyAppState extends State<MyApp> {
       routes: {
         
         nameroute.nameRouote_HomeScreen :(ctx)=> HomeScreen(), 
-                nameroute.nameRouote_MenuCategoryForsupCategory :(ctx)=> MenuCategoryForsupCategory(), 
+        nameroute.nameRouote_MenuCategoryForsupCategory :(ctx)=> MenuCategoryForsupCategory(), 
+        nameroute.nameRouote_OrdarScreen :(ctx)=> OrdarScreen(), 
 
 
       },
@@ -92,6 +95,6 @@ class MyAppState extends State<MyApp> {
 }
 class nameroute{
  static const nameRouote_HomeScreen ='/HomeScreen';
+ static const nameRouote_OrdarScreen ='/OrdarScreen';
  static const nameRouote_MenuCategoryForsupCategory ='/MenuCategoryForsupCategory';
-
 }
