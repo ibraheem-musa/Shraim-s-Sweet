@@ -1,4 +1,3 @@
-import 'package:first_app_for_test/main.dart';
 import 'package:first_app_for_test/model/MenuProduct.dart';
 import 'package:flutter/material.dart';
 
@@ -26,8 +25,8 @@ class _OrdarScreenState extends State<OrdarScreen> {
     MenuProductProvider menuProductProvider =
         Provider.of<MenuProductProvider>(context, listen: false);
 
-    var idForcat ;
-     idForcat= ModalRoute.of(context).settings.arguments as int;
+    int idForcat =0;
+     
      List<MenuProduct> butithear;
 
   //  if(idForcat==null){
@@ -60,8 +59,8 @@ class _OrdarScreenState extends State<OrdarScreen> {
                         print(idForcat);
                        
                       }); 
-                        Navigator.pushNamed(context,'/MenuCategoryForsupCategory',
-         arguments: menuCategoryProvider.menuCategory[index].id );
+        //                 Navigator.pushNamed(context,'/MenuCategoryForsupCategory',
+        //  arguments: menuCategoryProvider.menuCategory[index].id );
                           },
                       child: cercilCard(
                         image: menuCategoryProvider
@@ -78,7 +77,9 @@ class _OrdarScreenState extends State<OrdarScreen> {
                   itemBuilder: (_, i) {
                     return GestureDetector(
                       onTap: () {
-                        print(idForcat.toString());
+                        print(idForcat);
+                                
+
                       },
                       child: CardForsubcatogry(
                         image: menuProductProvider.getfifiler(idForcat)[i].image,

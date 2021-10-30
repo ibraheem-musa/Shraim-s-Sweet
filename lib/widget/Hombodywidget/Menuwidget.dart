@@ -29,15 +29,10 @@ class _MenuWidgetState extends State<MenuWidget> {
 
                 onTap: () {
 
-                  
-        //            Navigator.push(
-        //   context,
-        //   MaterialPageRoute(builder: (context) => OrdarScreen()));
-
-                 Navigator.pushNamed(context,nameroute.nameRouote_HomeScreen,
-         arguments: 2
-         
-         );
+    
+          Navigator.pushNamed(context,'/MenuCategoryForsupCategory',
+         arguments: drawerProvider.menuCategory[i].id );
+       
          
                 },
 
