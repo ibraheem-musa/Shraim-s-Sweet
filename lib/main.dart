@@ -2,6 +2,7 @@ import 'package:first_app_for_test/provider/MenuCategoryprovider.dart';
 import 'package:first_app_for_test/provider/MenuSubCategoryprovider.dart';
 import 'package:first_app_for_test/screen/BottomNavigationBar/OrdarScreen.dart';
 import 'package:first_app_for_test/screen/MenuCategoryScreen.dart';
+import 'package:first_app_for_test/screen/ProductDetails.dart';
 import 'package:first_app_for_test/screen/home_screen.dart';
 import 'package:first_app_for_test/widget/Splash_Screen.dart';
 import 'package:first_app_for_test/provider/drawerprovider.dart';
@@ -86,8 +87,7 @@ class MyAppState extends State<MyApp> {
         nameroute.nameRouote_HomeScreen :(ctx)=> HomeScreen(), 
         nameroute.nameRouote_MenuCategoryForsupCategory :(ctx)=> MenuCategoryForsupCategory(), 
         nameroute.nameRouote_OrdarScreen :(ctx)=> OrdarScreen(), 
-
-
+        nameroute.nameRouote_ProductDetails :(ctx)=> ProductDetails(), 
       },
       
       ));
@@ -97,4 +97,5 @@ class nameroute{
  static const nameRouote_HomeScreen ='/HomeScreen';
  static const nameRouote_OrdarScreen ='/OrdarScreen';
  static const nameRouote_MenuCategoryForsupCategory ='/MenuCategoryForsupCategory';
+ static const nameRouote_ProductDetails ='/ProductDetails';
 }

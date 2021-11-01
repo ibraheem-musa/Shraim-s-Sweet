@@ -1,3 +1,4 @@
+import 'package:first_app_for_test/Colors.dart';
 import 'package:first_app_for_test/applocal.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -12,14 +13,14 @@ class PrivacyAndPolicy extends StatefulWidget {
 class _PrivacyAndPolicyState extends State<PrivacyAndPolicy> {
   double _width = 200;
   double _height = 0;
-  Color _color=Color(0xffbf942e);
+  Color _color= ColorForDesign().Gold;
   @override
   void initState() {
     super.initState();
     Future.delayed(Duration(milliseconds: 0)).then((value) => setState(() {
           _width = MediaQuery.of(context).size.width;
           _height = MediaQuery.of(context).size.height;
-          _color=Color(0xaabf942e);
+          _color= ColorForDesign().black;
         }));
   }
 
@@ -30,10 +31,7 @@ class _PrivacyAndPolicyState extends State<PrivacyAndPolicy> {
         
         appBar: AppBar(
             centerTitle: true,
-            
-            // title: Text(AppLocalizations.of(context).translate('PrivacyandPolicy')),
             backgroundColor:
-            //  HexColor("#bf942e")
             Colors.black
             ),
         body: Center(
@@ -52,7 +50,7 @@ class _PrivacyAndPolicyState extends State<PrivacyAndPolicy> {
                           
                             AppLocalizations.of(context)
                                 .translate('PrivacyandPolicy'),
-                            style: TextStyle(fontSize: 30),textAlign: TextAlign.center,),
+                            style: TextStyle(fontSize: 30,color:  ColorForDesign().Gold),textAlign: TextAlign.center,),
                       ),
                       TextForprivacyANDPolicr(
                         text: AppLocalizations.of(context)
@@ -92,7 +90,7 @@ class TextForprivacyANDPolicr extends StatelessWidget {
           child: Center(
               child: Text(text,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 20, color: Colors.black87))),
+                  style: TextStyle(fontSize: 20, color:  ColorForDesign().Gold))),
         ),
       ],
     );

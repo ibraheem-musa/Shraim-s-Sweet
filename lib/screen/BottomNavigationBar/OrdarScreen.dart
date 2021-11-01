@@ -1,3 +1,4 @@
+import 'package:first_app_for_test/Colors.dart';
 import 'package:first_app_for_test/model/MenuProduct.dart';
 import 'package:flutter/material.dart';
 
@@ -40,14 +41,14 @@ class _OrdarScreenState extends State<OrdarScreen> {
   //     }).toList();
 
     return Container(
-      color: Color(0xffBF942E),
+      color: ColorForDesign().black,
       child: Container(
         height: MediaQuery.of(context).size.height,
         
         child: Column(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height / 4,
+              height: MediaQuery.of(context).size.height / 5,
               child: ListView.builder(
                   itemCount: menuCategoryProvider.menuCategory.length,
                   scrollDirection: Axis.horizontal,
@@ -82,7 +83,7 @@ class _OrdarScreenState extends State<OrdarScreen> {
 
                       },
                       child: CardForsubcatogry(
-                        image: menuProductProvider.getfifiler(idForcat)[i].image,
+                        image: menuProductProvider.getfifiler(idForcat)[i].logoimage,
                         price: menuProductProvider.getfifiler(idForcat)[i].price,
                         textforname: menuProductProvider.getfifiler(idForcat)[i].name,
                       ),
@@ -111,24 +112,26 @@ class cercilCard extends StatelessWidget {
         // ),
         color: Colors.transparent,
         child: Container(
-          height: MediaQuery.of(context).size.height / 4,
+          height: MediaQuery.of(context).size.height / 5,
           width: MediaQuery.of(context).size.width/4,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ClipRRect(
                 
                   borderRadius: BorderRadius.circular(50),
                   child: Image.asset(
                     image,
-                    height:MediaQuery.of(context).size.height / 8 ,
+                    height:MediaQuery.of(context).size.height / 10 ,
                     fit: BoxFit.contain,
                   )),
               SizedBox(
-                height: 20,
+                height: MediaQuery.of(context).size.height/30,
               ),
               Text(
                 AppLocalizations.of(context).translate(text),
                 style: TextStyle(
+                  color: ColorForDesign().Gold,
                   fontSize: 16,
                 ),
               )
@@ -183,7 +186,7 @@ class CardForsubcatogry extends StatelessWidget {
                     ),
                     Text(
                       price.toString() + ' \$',
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(fontSize: 20,),
                     )
                   ],
                 ),

@@ -1,4 +1,5 @@
 import 'package:first_app_for_test/applocal.dart';
+import 'package:first_app_for_test/main.dart';
 import 'package:first_app_for_test/model/MenuProduct.dart';
 import 'package:first_app_for_test/provider/MenuCategoryprovider.dart';
 import 'package:first_app_for_test/provider/MenuSubCategoryprovider.dart';
@@ -47,11 +48,18 @@ class _MenuCategoryForsupCategoryState extends State<MenuCategoryForsupCategory>
                   child: ListView.builder(
                     itemCount:  filtercatgory.length,
                     itemBuilder: (_, i) {
-                    return CardForsubcatogry(
-                      image: filtercatgory[i].image,
-                      price:  filtercatgory[i].price,
-                      textforname:  filtercatgory[i].name,
-    
+                    return GestureDetector(
+                      onTap: (){
+                           Navigator.pushNamed(context,nameroute.nameRouote_ProductDetails  );
+       
+
+                      },
+                      child: CardForsubcatogry(
+                        image: filtercatgory[i].logoimage,
+                        price:  filtercatgory[i].price,
+                        textforname:  filtercatgory[i].name,
+                        
+                      ),
                     );
                   }),
                 )

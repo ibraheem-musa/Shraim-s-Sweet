@@ -14,16 +14,12 @@ class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // appBar: AppBar(
-        //     title: Text("Shraim's Sweets Home bage"),
-        //     backgroundColor: HexColor("#bf942e")),
-
+       
 
         body: Container(),
 
 
-        // drawer:DrawerWidget(),
-        // bottomNavigationBar: NavigationBar()
+       
         );
   }
 }

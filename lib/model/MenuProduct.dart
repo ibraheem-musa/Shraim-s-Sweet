@@ -1,10 +1,11 @@
 class MenuProduct {
 int id;
 int idCategory;
-String image;
+String logoimage;
 String name;
 int price;
 
-MenuProduct({this.id,this.idCategory,this.image,this.name,this.price});
+
+MenuProduct({this.id,this.idCategory,this.logoimage,this.name,this.price});
 
 }

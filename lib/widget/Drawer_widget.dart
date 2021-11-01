@@ -93,7 +93,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
     );
   }
 
-  ListTileOnTap(String i) {
+  ListTileOnTap(String i) async{
     //------------------------------case0-------------------------------------------------------
 
     switch (i) {
@@ -156,7 +156,13 @@ class _DrawerWidgetState extends State<DrawerWidget> {
         break;
       //------------------------------case7-------------------------------------------------------
 
-      case '7':
+      case '7' :
+            SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+            sharedPreferences.remove('userEmail');
+Navigator.pushReplacementNamed(
+          context,
+         nameroute.nameRouote_HomeScreen
+        );
         break;
       default:
     }

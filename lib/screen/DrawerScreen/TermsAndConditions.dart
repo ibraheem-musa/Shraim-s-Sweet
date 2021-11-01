@@ -1,3 +1,4 @@
+import 'package:first_app_for_test/Colors.dart';
 import 'package:first_app_for_test/applocal.dart';
 import 'package:flutter/animation.dart';
 
@@ -31,10 +32,10 @@ final double end=controler.position.maxScrollExtent;
         appBar: AppBar(
             title: Text(AppLocalizations.of(context).translate('TermsandCondition')),
             centerTitle: true,
-            backgroundColor: HexColor("#bf942e")),
+            backgroundColor:  ColorForDesign().black),
         body: Center(
         child: Container(
-          color:Color(0xaabf942e) ,
+          color: ColorForDesign().black ,
           child: ListView(
           controller: controler,
           children: [
@@ -73,11 +74,11 @@ class TextForTermAndCondition extends StatelessWidget {
     return Wrap(
       children: [
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(top: 15,left: 8,right: 8),
           child: Center(
               child: Text(text,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: fontsize, color: Colors.black87))),
+                  style: TextStyle(fontSize: fontsize, color:  ColorForDesign().Gold))),
         ),
       ],
     );

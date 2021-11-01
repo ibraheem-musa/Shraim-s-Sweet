@@ -1,3 +1,4 @@
+import 'package:first_app_for_test/Colors.dart';
 import 'package:flutter/material.dart';
 
 class MessageandNot extends StatefulWidget {
@@ -13,12 +14,12 @@ class _MessageandNotState extends State<MessageandNot> {
   String phone;
   String supject;
   String Message;
-var loginformkey = GlobalKey<FormState>();
+var contactformkey = GlobalKey<FormState>();
    CheckifTheTextBoxEmpty() {
-    if (!loginformkey.currentState.validate()) {
+    if (!contactformkey.currentState.validate()) {
       return null;
     } else {
-      loginformkey.currentState.save();
+      contactformkey.currentState.save();
     
     }
   }
@@ -27,11 +28,11 @@ var loginformkey = GlobalKey<FormState>();
   Widget build(BuildContext context) {
     return Container(
       
-      color: Color(0xffbf942e),
+      color: ColorForDesign().black,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Form(
-          key: loginformkey,
+          key: contactformkey,
             child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -39,14 +40,14 @@ var loginformkey = GlobalKey<FormState>();
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
-                  style: TextStyle(color: Colors.black),
-                  cursorColor: Colors.black,
+                  style: TextStyle(color: ColorForDesign().Gold),
+                  cursorColor:  ColorForDesign().Gold,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     labelText: "Your Name",
-                    labelStyle: TextStyle(color: Color(0xAA222222)),
+                    labelStyle: TextStyle(color:  ColorForDesign().Gold),
                     fillColor: Colors.amber,
-                    hintStyle: TextStyle(color: Color(0xAA222222)),
+                    hintStyle: TextStyle(color:  ColorForDesign().Gold),
                     focusedErrorBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                       borderSide: BorderSide(
@@ -62,13 +63,13 @@ var loginformkey = GlobalKey<FormState>();
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color: ColorForDesign().Gold,
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color:  ColorForDesign().Gold,
                         width: 2.0,
                       ),
                     ),
@@ -87,16 +88,16 @@ var loginformkey = GlobalKey<FormState>();
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
-                  style: TextStyle(color: Colors.black),
-                  cursorColor: Colors.black,
+                  style: TextStyle(color:  ColorForDesign().Gold),
+                  cursorColor:  ColorForDesign().Gold,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     labelText: "Your Email",
-                    labelStyle: TextStyle(color: Color(0xAA222222)),
+                    labelStyle: TextStyle(color:  ColorForDesign().Gold),
                     fillColor: Colors.amber,
                     // hoverColor: Colors.amber,
                     // hintText: "Enter Email",
-                    hintStyle: TextStyle(color: Color(0xAA222222)),
+                    hintStyle: TextStyle(color:  ColorForDesign().Gold),
 
                     focusedErrorBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
@@ -113,13 +114,13 @@ var loginformkey = GlobalKey<FormState>();
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color:  ColorForDesign().Gold,
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color:  ColorForDesign().Gold,
                         width: 2.0,
                       ),
                     ),
@@ -138,16 +139,16 @@ var loginformkey = GlobalKey<FormState>();
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
-                  style: TextStyle(color: Colors.black),
-                  cursorColor: Colors.black,
+                  style: TextStyle(color: ColorForDesign().Gold),
+                  cursorColor:  ColorForDesign().Gold,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     labelText: "Your Phone",
-                    labelStyle: TextStyle(color: Color(0xAA222222)),
+                    labelStyle: TextStyle(color:  ColorForDesign().Gold),
                     fillColor: Colors.amber,
                     // hoverColor: Colors.amber,
                     // hintText: "Enter Email",
-                    hintStyle: TextStyle(color: Color(0xAA222222)),
+                    hintStyle: TextStyle(color:  ColorForDesign().Gold),
 
                     focusedErrorBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
@@ -164,13 +165,13 @@ var loginformkey = GlobalKey<FormState>();
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color:  ColorForDesign().Gold,
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color:  ColorForDesign().Gold,
                         width: 2.0,
                       ),
                     ),
@@ -189,16 +190,16 @@ var loginformkey = GlobalKey<FormState>();
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
-                  style: TextStyle(color: Colors.black),
-                  cursorColor: Colors.black,
+                  style: TextStyle(color:  ColorForDesign().Gold),
+                  cursorColor:  ColorForDesign().Gold,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     labelText: "the message Subject ...",
-                    labelStyle: TextStyle(color: Color(0xAA222222)),
+                    labelStyle: TextStyle(color:  ColorForDesign().Gold),
                     fillColor: Colors.amber,
                     // hoverColor: Colors.amber,
                     // hintText: "Enter Email",
-                    hintStyle: TextStyle(color: Color(0xAA222222)),
+                    hintStyle: TextStyle(color:  ColorForDesign().Gold),
 
                     focusedErrorBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
@@ -215,13 +216,13 @@ var loginformkey = GlobalKey<FormState>();
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color:  ColorForDesign().Gold,
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color:  ColorForDesign().Gold,
                         width: 2.0,
                       ),
                     ),
@@ -242,15 +243,15 @@ var loginformkey = GlobalKey<FormState>();
                 child: TextFormField(
                   maxLines: 5, 
                   keyboardType: TextInputType.multiline,
-                  style: TextStyle(color: Colors.black),
-                  cursorColor: Colors.black,
+                  style: TextStyle(color:  ColorForDesign().Gold),
+                  cursorColor:  ColorForDesign().Gold,
                    decoration: InputDecoration(
                     labelText: "Message .....",
-                    labelStyle: TextStyle(color: Color(0xAA222222)),
+                    labelStyle: TextStyle(color:  ColorForDesign().Gold),
                     fillColor: Colors.amber,
                     // hoverColor: Colors.amber,
                     // hintText: "Enter Email",
-                    hintStyle: TextStyle(color: Color(0xAA222222)),
+                    hintStyle: TextStyle(color:  ColorForDesign().Gold),
 
                     focusedErrorBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
@@ -267,13 +268,13 @@ var loginformkey = GlobalKey<FormState>();
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color:  ColorForDesign().Gold,
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color:  ColorForDesign().Gold,
                         width: 2.0,
                       ),
                     ),
@@ -291,15 +292,15 @@ var loginformkey = GlobalKey<FormState>();
               ),
               OutlinedButton(
                             style: OutlinedButton.styleFrom(
-                                primary: Colors.black,
-                                backgroundColor: Colors.black,
+                                primary:  ColorForDesign().black,
+                                backgroundColor:  ColorForDesign().Gold,
                                 fixedSize: Size(200, 35)),
                             onPressed: () {
                               CheckifTheTextBoxEmpty();
                             },
                             child: Text('Send',
                                 style: TextStyle(
-                                    fontSize: 20, color: Color(0xffbf942e))),
+                                    fontSize: 20, color:  ColorForDesign().black)),
                           ),
                         
             ],

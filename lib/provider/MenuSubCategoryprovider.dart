@@ -7,11 +7,11 @@ class MenuProductProvider with ChangeNotifier{
  
 List<MenuProduct> menuProduct=[
   
-MenuProduct(idCategory:0 , id: 0,image: 'lib/assets/Subcatogry/Crepe & Roll.png',name: 'Crepe & Roll',price:25),
-MenuProduct(idCategory:1 , id: 1,image: 'lib/assets/Subcatogry/Ice Cream.png',name: 'ice creem',price:25),
-MenuProduct(idCategory:2 , id: 2,image: "lib/assets/Subcatogry/Shraim's Milkshake.png",name: "Shraim's Milkshake",price:25),
-MenuProduct(idCategory:3 , id: 3,image: "lib/assets/Subcatogry/Shraim's Milkshake.png",name: "Shraim's Milkshake",price:25),
-MenuProduct(idCategory:3, id: 4,image: "lib/assets/Subcatogry/Shraim's Milkshake.png",name:"Shraim's Milkshake",price:25),
+MenuProduct(idCategory:0 , id: 0,logoimage: 'lib/assets/Subcatogry/Crepe & Roll.png',name: 'Crepe & Roll',price:25),
+MenuProduct(idCategory:1 , id: 1,logoimage: 'lib/assets/Subcatogry/Ice Cream.png',name: 'ice creem',price:25),
+MenuProduct(idCategory:2 , id: 2,logoimage: "lib/assets/Subcatogry/Shraim's Milkshake.png",name: "Shraim's Milkshake",price:25),
+MenuProduct(idCategory:3 , id: 3,logoimage: "lib/assets/Subcatogry/Shraim's Milkshake.png",name: "Shraim's Milkshake",price:25),
+MenuProduct(idCategory:3, id: 4,logoimage: "lib/assets/Subcatogry/Shraim's Milkshake.png",name:"Shraim's Milkshake",price:25),
 ];
 
 

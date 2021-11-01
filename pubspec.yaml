@@ -33,6 +33,7 @@ dependencies:
   carousel_pro: ^1.0.0 
   carousel_slider: ^4.0.0
   url_launcher: ^5.7.10
+  http: ^0.13.4
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -77,6 +78,14 @@ flutter:
    - lib/assets/Subcatogry/Crepe & Roll.png
    - lib/assets/Subcatogry/Ice Cream.png
    - lib/assets/Subcatogry/Shraim's Milkshake.png
+   - lib/assets/Socialmediaandicon/icon 5-01.png
+   - lib/assets/Socialmediaandicon/icon 5-02.png
+   - lib/assets/Socialmediaandicon/icon 5-03.png
+   - lib/assets/Socialmediaandicon/icon 5-04.png
+   - lib/assets/Socialmediaandicon/icon 5-05.png
+   - lib/assets/Socialmediaandicon/social media-01.png
+   - lib/assets/Socialmediaandicon/social media-02.png
+   - lib/assets/Socialmediaandicon/social media-03.png
    - lang/en.json
    - lang/fr.json
 

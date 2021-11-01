@@ -1,3 +1,4 @@
+import 'package:first_app_for_test/Colors.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -15,7 +16,7 @@ class _SocialMediaState extends State<SocialMedia> {
       height: 300,
       decoration: BoxDecoration(boxShadow: [
         BoxShadow(
-            color: Color(0xffbf942e),
+            color: ColorForDesign().black,
             offset: Offset(-5.0, 5.0),
             blurRadius: 10.0,
             spreadRadius: 2),
@@ -27,11 +28,11 @@ class _SocialMediaState extends State<SocialMedia> {
            children: [
              Center(
                child: Wrap(children: [
-                 Text("Shraim's Sweets",style: TextStyle(fontSize:25,decorationThickness: 20),),
+                 Text("Shraim's Sweets",style: TextStyle(fontSize:25,decorationThickness: 20,color: ColorForDesign().Gold),),
                  
                ],),
              ),
-             Text(" On social media",style: TextStyle(fontSize: 20,decorationThickness: 20),),
+             Text(" On social media",style: TextStyle(fontSize: 20,decorationThickness: 20,color: ColorForDesign().Gold),),
              SizedBox(height: 50,),
              Center(
                 child: Row(
@@ -42,7 +43,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         _facebooklaunchURL();
                       },
                       child: Image.asset(
-                        "lib/assets/F.png",
+                        "lib/assets/Socialmediaandicon/social media-02.png",
                         height: 50,
                         width: 50,
                       ),
@@ -55,7 +56,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         _instgramlaunchURL();
                       },
                       child: Image.asset(
-                        "lib/assets/I.png",
+                        "lib/assets/Socialmediaandicon/social media-01.png",
                         height: 50,
                         width: 50,
                       ),
@@ -68,7 +69,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         _tiktoklaunchURL();
                       },
                       child: Image.asset(
-                        "lib/assets/T.png",
+                        "lib/assets/Socialmediaandicon/social media-03.png",
                         height: 50,
                         width: 50,
                       ),
@@ -87,7 +88,7 @@ class _SocialMediaState extends State<SocialMedia> {
     if (await canLaunch(url)) {
       await launch(url);
     } else {
-      throw 'Could not launch $url';
+      print('Could not launch $url');
     }
   }
 
@@ -96,7 +97,7 @@ class _SocialMediaState extends State<SocialMedia> {
     if (await canLaunch(url)) {
       await launch(url);
     } else {
-      throw 'Could not launch $url';
+    print( 'Could not launch $url');
     }
   }
 
@@ -105,7 +106,7 @@ class _SocialMediaState extends State<SocialMedia> {
     if (await canLaunch(url)) {
       await launch(url);
     } else {
-      throw 'Could not launch $url';
+     print('Could not launch $url');
     }
   }
 }
