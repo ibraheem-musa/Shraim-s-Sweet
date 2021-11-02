@@ -1,3 +1,4 @@
+import 'package:first_app_for_test/provider/CategoryImageprovaider.dart';
 import 'package:first_app_for_test/provider/MenuCategoryprovider.dart';
 import 'package:first_app_for_test/provider/MenuSubCategoryprovider.dart';
 import 'package:first_app_for_test/screen/BottomNavigationBar/OrdarScreen.dart';
@@ -6,11 +7,12 @@ import 'package:first_app_for_test/screen/ProductDetails.dart';
 import 'package:first_app_for_test/screen/home_screen.dart';
 import 'package:first_app_for_test/widget/Splash_Screen.dart';
 import 'package:first_app_for_test/provider/drawerprovider.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:provider/provider.dart';
 import 'package:first_app_for_test/applocal.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 SharedPreferences sharedPreferences;
 void main() async{
@@ -50,7 +52,9 @@ class MyAppState extends State<MyApp> {
     return MultiProvider(providers: [
              ChangeNotifierProvider.value( value: DrawerProvider(),),
              ChangeNotifierProvider.value( value: MenuCategoryProvider(),),
-  ChangeNotifierProvider.value( value: MenuProductProvider(),),
+             ChangeNotifierProvider.value( value: MenuProductProvider(),),
+             ChangeNotifierProvider.value( value: CategoryImageprocaider(),),
+  
     ], child:
     
     MaterialApp(

@@ -1,5 +1,6 @@
 import 'package:first_app_for_test/Colors.dart';
 import 'package:first_app_for_test/model/MenuProduct.dart';
+import 'package:first_app_for_test/provider/CategoryImageprovaider.dart';
 import 'package:flutter/material.dart';
 
 import 'package:first_app_for_test/applocal.dart';
@@ -25,7 +26,8 @@ class _OrdarScreenState extends State<OrdarScreen> {
 
     MenuProductProvider menuProductProvider =
         Provider.of<MenuProductProvider>(context, listen: false);
-
+CategoryImageprocaider categoryImageprocaider=
+Provider.of<CategoryImageprocaider>(context, listen: false);
     int idForcat =0;
      
      List<MenuProduct> butithear;
@@ -64,8 +66,7 @@ class _OrdarScreenState extends State<OrdarScreen> {
         //  arguments: menuCategoryProvider.menuCategory[index].id );
                           },
                       child: cercilCard(
-                        image: menuCategoryProvider
-                            .menuCategory[index].logoImage,
+                        image: categoryImageprocaider.categoryImage[index].logoImage,
                         text:
                             menuCategoryProvider.menuCategory[index].name,
                       ),

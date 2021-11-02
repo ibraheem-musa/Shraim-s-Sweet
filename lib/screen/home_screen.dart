@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
  var sentindex ;
   int curentIndex = 0;
- 
+
   
 
    
@@ -43,8 +43,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+      var argumentchek = ModalRoute.of(context).settings.arguments as bool;
+
     final tabe = [
-    HomeScreenBody( ),
+    HomeScreenBody(isLogingWithoutsherd: argumentchek, ),
     CartScreen(),
     OrdarScreen(),
     NotifficationScreen(),

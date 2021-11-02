@@ -18,10 +18,10 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   var loginformkey = GlobalKey<FormState>();
   var signUpformkey = GlobalKey<FormState>();
-bool _passwordVisible =false;
+bool _passwordVisible =true;
 
-bool _passwordsignupVisible =false;
-bool _passwordsignupconfermVisible =false;
+bool _passwordsignupVisible =true;
+bool _passwordsignupconfermVisible =true;
 
   String userEmail;
   String userPassowrd;
@@ -144,7 +144,7 @@ showDialog<String>(
        });
     }
   }
-
+//-----------------------------------------------------------------
  Future<bool> loginIn(var email, var pass) async {
     String url = 'http://45.76.143.83/api/authentication/login.php';
     final response = await http.post(Uri.parse(url),
@@ -185,17 +185,21 @@ showDialog<String>(
    
     }else{
 
-       Navigator.pushReplacementNamed(context, nameroute.nameRouote_HomeScreen );
+      
 if (checkboxvalue==true){
   SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
   sharedPreferences.setString('userEmail',userEmail);
-    
+     Navigator.pushReplacementNamed(context, nameroute.nameRouote_HomeScreen );
 // User(error:json['error'],user:json['email'],message: json['message']  );
+}else{
+ Navigator.pushReplacementNamed(context, nameroute.nameRouote_HomeScreen ,arguments: true);
+
 }
 
     }
     
     }
+//-----------------------------------------------------------------
 
 
     

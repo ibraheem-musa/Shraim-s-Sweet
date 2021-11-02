@@ -1,5 +1,6 @@
 import 'package:first_app_for_test/applocal.dart';
 import 'package:first_app_for_test/main.dart';
+import 'package:first_app_for_test/provider/CategoryImageprovaider.dart';
 import 'package:first_app_for_test/provider/MenuCategoryprovider.dart';
 import 'package:first_app_for_test/screen/BottomNavigationBar/OrdarScreen.dart';
 import 'package:first_app_for_test/screen/MenuCategoryScreen.dart';
@@ -18,6 +19,8 @@ class _MenuWidgetState extends State<MenuWidget> {
   Widget build(BuildContext context) {
     MenuCategoryProvider drawerProvider =
         Provider.of<MenuCategoryProvider>(context, listen: false);
+        CategoryImageprocaider categoryImageprocaider =
+        Provider.of<CategoryImageprocaider>(context, listen: false);
 
     return Container(
       height: 190,
@@ -37,7 +40,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                 },
 
                 child: CardFormenu(
-                  image: drawerProvider.menuCategory[i].image,
+                  image: categoryImageprocaider.categoryImage[i].image,
                   text: drawerProvider.menuCategory[i].name,
                 ));
           }),

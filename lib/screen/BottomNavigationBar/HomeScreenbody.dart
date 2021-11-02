@@ -11,15 +11,16 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
  
 class HomeScreenBody extends StatefulWidget {
-  
-  HomeScreenBody({Key}) ;
+  bool isLogingWithoutsherd;
+  HomeScreenBody({this.isLogingWithoutsherd}) ;
 
   @override
-  _HomeScreenBodyState createState() => _HomeScreenBodyState();
+  _HomeScreenBodyState createState() => _HomeScreenBodyState(isLogingWithoutsherdpre:isLogingWithoutsherd );
 }
 
 class _HomeScreenBodyState extends State<HomeScreenBody> {
-
+  bool isLogingWithoutsherdpre;
+_HomeScreenBodyState({this.isLogingWithoutsherdpre});
 @override
 
  
@@ -35,12 +36,11 @@ String finaluserEmail;
   }
 
   saveAndChikshared() async {
-
       SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
         setState(() {
           finaluserEmail=sharedPreferences.getString('userEmail');
         });
-          if (finaluserEmail!=null){
+          if (finaluserEmail!=null ||isLogingWithoutsherdpre!=null){
 setState(() {
    islogin=true;
    });
